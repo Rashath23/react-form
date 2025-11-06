@@ -1,10 +1,9 @@
 import { useState } from "react";
-import ProductList from "./productlist.jsx";
 import SignupForm from "./signupform.jsx";
 
 export default function App() {
   const [text, setText] = useState("");
-  const [dark, setDark] = useState(false);
+  
 
   return (
     <div
@@ -28,13 +27,7 @@ export default function App() {
       />
       <p><strong>Preview:</strong> {text}</p>
 
-      {/* 2. Dark/Light Mode */}
-      <button onClick={() => setDark(!dark)}>
-        Switch to {dark ? "Light" : "Dark"} Mode
-      </button>
-
-      {/* 3–6 Product List Component */}
-      <ProductList dark={dark} />
+     
 
       {/* 7–11 Signup Form Component */}
       <SignupForm dark={dark} />
